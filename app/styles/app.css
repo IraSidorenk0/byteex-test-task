@@ -20,9 +20,42 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Suisse Int';
+  src: url('../assets/fonts/SuisseIntl-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 img {
   border-radius: 4px;
 }
+
+.avatar-img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+.review-item {
+  border-radius: 8px;
+  border: 1px solid #EDEDED;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.stars-img {
+  height: 15px;
+}
+
+.text-review {
+  font-family: 'Suisse Int';
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 4%;
+}
+
+
 
 .customize-button {
   background: #01005B;
@@ -289,6 +322,13 @@ button.reset:hover:not(:has(> *)) {
 */
 .logo-container {
   padding: 2rem 2rem 5rem;
+}
+
+main .review-item {
+  position: absolute;
+  background: #fff;
+  z-index: 85;
+  margin-top: -80px;
 }
 
 .comfortable-container {
@@ -850,8 +890,9 @@ button.reset:hover:not(:has(> *)) {
   border-radius: 50%;
   margin-right: 17px;
 }
+
 .as-see-in-swipe-container {
-    padding: 0 1rem 4rem;
+    padding: 4rem 1rem 4rem;
 }
 
 .as-see-in-swipe-container .sipwer-container {

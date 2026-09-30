@@ -1,5 +1,6 @@
 import Logo from './components/Logo';
 import CustomizeButton from './components/CustomizeButton';
+import Review from './components/Review';
 import first from '~/assets/img/main-block-icons/1.svg';
 import second from '~/assets/img/main-block-icons/2.svg';
 import thirt from '~/assets/img/main-block-icons/3.svg';
@@ -34,6 +35,7 @@ export default function LogoComponent() {
                 </div>
             </div>
         </div>
+        <Review />
     </main>
   );
 }
