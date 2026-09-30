@@ -1,13 +1,10 @@
 import {Await, useLoaderData, Link} from 'react-router';
 import type {Route} from './+types/_index';
 import {Suspense} from 'react';
-import {Image} from '@shopify/hydrogen';
 import type {
-  FeaturedCollectionFragment,
   RecommendedProductsQuery,
 } from 'storefrontapi.generated';
 import {ProductItem} from '~/components/ProductItem';
-import {MockShopNotice} from '~/components/MockShopNotice';
 
 export const meta: Route.MetaFunction = () => {
   return [{title: 'Hydrogen | Home'}];
@@ -62,38 +59,11 @@ export default function Homepage() {
   const data = useLoaderData<typeof loader>();
   return (
     <div className="home">
-      {data.isShopLinked ? null : <MockShopNotice />}
-      <FeaturedCollection collection={data.featuredCollection} />
-      <RecommendedProducts products={data.recommendedProducts} />
+      {null}
     </div>
   );
 }
 
-function FeaturedCollection({
-  collection,
-}: {
-  collection: FeaturedCollectionFragment;
-}) {
-  if (!collection) return null;
-  const image = collection?.image;
-  return (
-    <Link
-      className="featured-collection"
-      to={`/collections/${collection.handle}`}
-    >
-      {image && (
-        <div className="featured-collection-image">
-          <Image
-            data={image}
-            sizes="100vw"
-            alt={image.altText || collection.title}
-          />
-        </div>
-      )}
-      <h1>{collection.title}</h1>
-    </Link>
-  );
-}
 
 function RecommendedProducts({
   products,

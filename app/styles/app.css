@@ -3,13 +3,57 @@
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 64px;
+  --header-height: 60px;
   --color-dark: #000;
   --color-light: #fff;
 }
 
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../assets/fonts/Sofia_Pro_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 img {
   border-radius: 4px;
+}
+
+.customize-button {
+  background: #01005B;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.customize-button img {
+  margin-left: 15px;
+  width: 20px;
+}
+
+.title-style {
+  font-family: Sofia Pro;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 38px;
+  line-height: 45px;
+  color: #01005B;
+  padding: 1rem 0;
+}
+
+.p-style {
+  font-family: Sofia Pro;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 3%;
+  color: #676869;
+}
+
+footer {
+  background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
 }
 
 /*
@@ -20,57 +64,6 @@ img {
 .link:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-
-/*
-* --------------------------------------------------
-* components/MockShopNotice
-* --------------------------------------------------
-*/
-.mock-shop-notice {
-  background: var(--color-light);
-  border: 1px solid var(--color-dark);
-  border-left-width: 0.5rem;
-  margin: 1rem 0;
-  padding: 0;
-
-  .inner {
-    padding: 0.875rem 1rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-  }
-
-  footer {
-    background: rgba(0, 0, 0, 0.06);
-    padding: 0.5rem 1rem;
-  }
-
-  .small {
-    font-size: 0.875rem;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-  }
-
-  code {
-    background: rgba(0, 0, 0, 0.06);
-    border-radius: 0.25rem;
-    padding: 0.1em 0.3em;
-  }
-
-  a {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-  }
 }
 
 /*
@@ -227,12 +220,12 @@ button.reset:hover:not(:has(> *)) {
 */
 .header {
   align-items: center;
-  background: #fff;
+  justify-content: center;
+  background: #F9F0E5;
   display: flex;
   height: var(--header-height);
+  text-align: center;
   padding: 0 1rem;
-  position: sticky;
-  top: 0;
   z-index: 1;
 }
 
@@ -271,6 +264,73 @@ button.reset:hover:not(:has(> *)) {
 
 .header-ctas > * {
   min-width: fit-content;
+}
+
+/*
+* --------------------------------------------------
+* components/Logo
+* --------------------------------------------------
+*/
+.logo-container {
+  padding: 2rem 2rem 5rem;
+}
+
+.comfortable-container {
+  margin: 2rem 0;
+}
+
+.comfortable-container div {
+  margin-bottom: 1rem;
+}
+
+.comfortable-container img {
+  background: #F9F0E5;
+  padding: 0.3rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+/*
+* --------------------------------------------------
+* components/BeYouBestComponent
+* --------------------------------------------------
+*/
+.be-you-best-component {
+  background: #F0EEEF;
+  padding: 2rem;
+  text-align: center;
+}
+.be-you-best-component p {
+  margin-bottom: 1rem;
+}
+/*
+* --------------------------------------------------
+* components/TotalGreenImpact
+* --------------------------------------------------
+*/
+
+.total-green-impact-component {
+  background: #F0EEEF;
+  padding: 2rem;
+  text-align: center;
+}
+
+/*
+* --------------------------------------------------
+* components/FansSayingComponent
+* --------------------------------------------------
+*/
+
+
+/*
+* --------------------------------------------------
+* components/FAQComponent
+* --------------------------------------------------
+*/  
+.faq-component {
+  padding: 2rem;
 }
 
 /*
@@ -642,4 +702,90 @@ button.reset:hover:not(:has(> *)) {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+/*
+ * --------------------------------------------------
+ * components/LoungewearComponent (As Seen In Swiper)
+ * --------------------------------------------------
+ */
+
+.loungewear-component {
+  padding: 2rem;
+  background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
+
+}
+.as-see-in-swipe-container {
+    padding: 0 1rem;
+}
+
+.as-see-in-swipe-container .sipwer-container {
+  align-items: center;
+}
+
+.logoSwiper {
+    overflow: hidden;
+}
+
+.logoSwiper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0 15px;
+    max-width: 14vw;
+}
+
+@media (min-width: 1024px) {
+    .logoSwiper .swiper-pagination {
+        display: none;
+    }
+}
+
+.white-robe-swipe-container {
+    position: relative;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.girlSwiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.girlSwiper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.girlSwiper .swiper-button-next,
+.girlSwiper .swiper-button-prev {
+    color: #01005B;
+}
+
+.thumbs-swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.thumbs-swiper .swiper-slide {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.thumbs-swiper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
 }

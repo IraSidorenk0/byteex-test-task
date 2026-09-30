@@ -2,22 +2,27 @@ import {Await, Link} from 'react-router';
 import {Suspense, useId} from 'react';
 import type {
   CartApiQueryFragment,
-  FooterQuery,
   HeaderQuery,
 } from 'storefrontapi.generated';
 import {Aside} from '~/components/Aside';
-import {Footer} from '~/components/Footer';
 import {Header, HeaderMenu} from '~/components/Header';
+import LogoComponent from '~/components/main/LogoComponent';
 import {CartMain} from '~/components/CartMain';
 import {
   SEARCH_ENDPOINT,
   SearchFormPredictive,
 } from '~/components/SearchFormPredictive';
 import {SearchResultsPredictive} from '~/components/SearchResultsPredictive';
+import FooterComponent from './main/FooterComponent';
+import TotalGreenImpactComponent from './main/TotalGreenImpactComponent';
+import LoungewearComponent from './main/LoungewearComponent';
+import BeYouBestComponent from './main/BeYouBestComponent';
+import ComfortMakeEaseComponent from './main/ComfortMakeEaseComponent';
+import FansSayingComponent from './main/FansSayingComponent';
+import FAQComponent from './main/FAQComponent';
 
 interface PageLayoutProps {
   cart: Promise<CartApiQueryFragment | null>;
-  footer: Promise<FooterQuery | null>;
   header: HeaderQuery;
   isLoggedIn: Promise<boolean>;
   publicStoreDomain: string;
@@ -27,7 +32,6 @@ interface PageLayoutProps {
 export function PageLayout({
   cart,
   children = null,
-  footer,
   header,
   isLoggedIn,
   publicStoreDomain,
@@ -45,12 +49,15 @@ export function PageLayout({
           publicStoreDomain={publicStoreDomain}
         />
       )}
+      <LogoComponent/>
+      <LoungewearComponent/>
+      <BeYouBestComponent/>
+      <ComfortMakeEaseComponent/>
+      <FansSayingComponent/>
       <main>{children}</main>
-      <Footer
-        footer={footer}
-        header={header}
-        publicStoreDomain={publicStoreDomain}
-      />
+      <FAQComponent/>
+      <TotalGreenImpactComponent/>
+      <FooterComponent />
     </Aside.Provider>
   );
 }
