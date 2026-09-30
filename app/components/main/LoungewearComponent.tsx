@@ -20,8 +20,14 @@ import girl6 from '~/assets/img/girl-swiper/6.png';
 import girl7 from '~/assets/img/girl-swiper/7.png';
 import girl8 from '~/assets/img/girl-swiper/8.png';
 
+
+import first from '~/assets/img/main-block-icons/1.svg';
+import second from '~/assets/img/main-block-icons/2.svg';
+import third from '~/assets/img/main-block-icons/3.svg';
+import fourth from '~/assets/img/main-block-icons/4.svg';
+
 export default function LoungewearComponent() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <div className="loungewear-component">
@@ -75,7 +81,42 @@ export default function LoungewearComponent() {
             </Swiper>
         </div>
         <div className='flex'>
-          <div className="title-style flex-1">Loungewear you can be proud of.</div>
+          <div className="title-style flex-1">
+            <h2 className='title-style'>Loungewear you can be proud of.</h2>
+            <div className="comfort-make-ease-container">
+              <div className="flex">
+                <img src={second} alt="Second Image" />
+                <div className="mb-4">
+                  <h3 className="title-h3-style mb-2">Ethically sourced.</h3>
+                  <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
+                </div>
+              </div>
+
+              <div className="flex">
+                <img src={fourth} alt="Fourth Image" />
+                <div className="mb-4">
+                  <h3 className="title-h3-style mb-2">Responsibly made.</h3>
+                  <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
+                </div>
+              </div>
+
+              <div className="flex">
+                <img src={first} alt="First Image" />
+                <div className="mb-4">
+                  <h3 className="title-h3-style mb-2">Made for living in.</h3>
+                  <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
+                </div>
+              </div>
+
+              <div className="flex">
+                <img src={third} alt="Third Image" />
+                <div className="mb-4">
+                  <h3 className="title-h3-style mb-2">Unimaginably comfortable.</h3>
+                  <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="white-robe-swipe-container flex-1">
               <Swiper
@@ -115,8 +156,8 @@ export default function LoungewearComponent() {
                   className="thumbs-swiper"
                   modules={[Thumbs]}
                   onSwiper={(swiper) => setThumbsSwiper(swiper)}
-                  spaceBetween={10}
-                  slidesPerView={4}
+                  spaceBetween={1}
+                  slidesPerView={8}
                   watchSlidesProgress
                   loop
               >

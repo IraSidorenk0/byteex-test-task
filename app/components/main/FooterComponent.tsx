@@ -9,7 +9,7 @@ export default function FooterComponent() {
                 facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.
             </p>
             <div className="flex flex-col items-center justify-center">
-                <img src={footer} alt="Footer" className="mr-4" />
+                <img src={footer} alt="Footer" className="mr-4 my-7" />
                 <CustomizeButton />
             </div>
         </footer>
