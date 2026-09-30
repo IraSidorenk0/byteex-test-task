@@ -362,9 +362,64 @@ button.reset:hover:not(:has(> *)) {
 * --------------------------------------------------
 * components/FAQComponent
 * --------------------------------------------------
-*/  
+*/
 .faq-component {
   padding: 2rem;
+}
+
+.faq-accordion {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border-top: 1px solid #EAEAEA;
+  overflow: hidden;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.faq-item-trigger {
+  align-items: center;
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+
+.faq-item-title {
+  color: #01005B;
+  font-family: Sofia Pro;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0;
+  text-align: left;
+}
+
+.faq-item-icon {
+  color: #01005B;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.faq-item-content {
+  border-top: 1px solid #EAEAEA;
+  padding: 1rem;
+}
+
+.faq-item-content p {
+  color: #676869;
+  font-family: Sofia Pro;
+  font-size: 15px;
+  line-height: 23px;
+  margin: 0;
 }
 
 /*
@@ -879,7 +934,12 @@ button.reset:hover:not(:has(> *)) {
 
 .swiper-watch-progress {
   margin-top: -400px;
-  width: calc(100% - 150px) !important;
+  padding-bottom: 15px !important;
+  width: calc(100% - 210px) !important;
+}
+
+.swiper-slide-thumb-active {
+    border: 2px solid #fff;
 }
 
 .white-robe-swipe-container .swiper-button-prev, 
@@ -902,7 +962,6 @@ button.reset:hover:not(:has(> *)) {
 .thumbs-swiper .swiper-slide {
     width: auto;
     max-width: none;
-    opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.2s ease;
     overflow: hidden;
@@ -918,5 +977,6 @@ button.reset:hover:not(:has(> *)) {
     max-width: 100%;
     display: block;
     border-radius: 4px;
+    padding: 0 4px;
     object-fit: contain;
 }
