@@ -3,7 +3,7 @@
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
-  --header-height: 50px;
+  --header-height: 46px;
   --color-dark: #000;
   --color-light: #fff;
 }
@@ -360,6 +360,7 @@ main .review-item {
   margin-top: -80px;
 }
 
+
 .comfortable-container {
   margin: 2rem 0;
 }
@@ -388,7 +389,7 @@ main .review-item {
   text-align: center;
 }
 .be-you-best-component p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 /*
 * --------------------------------------------------  
@@ -401,6 +402,10 @@ main .review-item {
 .comfort-make-ease-component img {
   width: 40px;
   height: 40px;
+}
+
+.swiper-comfort-container {
+  margin: 0 50px;
 }
 
 /*
@@ -1156,7 +1161,7 @@ footer .footer-div:not(:last-child) {
 @media (max-width: 768px) {
 
   header span::after {
-    content: '';
+    content: '' !important;
   }
 
   header span:nth-child(1),
