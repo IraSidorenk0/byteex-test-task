@@ -7,14 +7,20 @@ export default function TotalGreenImpactComponent() {
         <div className="total-green-impact-component">
             <h3 className="title-h3-style">Our total green impact</h3>
             <div className="flex justify-center items-center gap-5 impact-container">
-                <div className="impact-item ">
-                    <img src={first} alt="First Image" />
+                <div className="impact-item flex flex-col justify-center items-center">
+                    <img src={first} alt="First Image" className="mb-3"/>
+                    <h3 className="title-h3-style font-bold">3,927 kg</h3>
+                    <span>of CO2 saved</span>
                 </div>
-                <div className="impact-item ">
-                    <img src={second} alt="Second Image" />
+                <div className="impact-item flex flex-col justify-center items-center">
+                    <img src={second} alt="Second Image" className="mb-3" />
+                    <h3 className="title-h3-style">2,546,167 days</h3>
+                    <span>of drinking water saved</span>
                 </div>
-                <div className="impact-item ">
-                    <img src={thirt} alt="Third Image" />
+                <div className="impact-item flex flex-col justify-center items-center">
+                    <img src={thirt} alt="Third Image" className="mb-3" />
+                    <h3 className="title-h3-style">7,321 kWh</h3>
+                    <span>of energy saved</span>
                 </div>
             </div>
         </div>

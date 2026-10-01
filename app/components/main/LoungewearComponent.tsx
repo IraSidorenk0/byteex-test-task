@@ -86,7 +86,7 @@ export default function LoungewearComponent() {
             <div className="comfort-make-ease-container">
               <div className="flex">
                 <img src={second} alt="Second Image" />
-                <div className="mb-4">
+                <div className="mb-5">
                   <h3 className="title-h3-style mb-2">Ethically sourced.</h3>
                   <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
                 </div>
@@ -94,7 +94,7 @@ export default function LoungewearComponent() {
 
               <div className="flex">
                 <img src={fourth} alt="Fourth Image" />
-                <div className="mb-4">
+                <div className="mb-5">
                   <h3 className="title-h3-style mb-2">Responsibly made.</h3>
                   <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
                 </div>
@@ -102,7 +102,7 @@ export default function LoungewearComponent() {
 
               <div className="flex">
                 <img src={first} alt="First Image" />
-                <div className="mb-4">
+                <div className="mb-5">
                   <h3 className="title-h3-style mb-2">Made for living in.</h3>
                   <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
                 </div>
@@ -110,7 +110,7 @@ export default function LoungewearComponent() {
 
               <div className="flex">
                 <img src={third} alt="Third Image" />
-                <div className="mb-4">
+                <div className="mb-5">
                   <h3 className="title-h3-style mb-2">Unimaginably comfortable.</h3>
                   <p className="p-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. </p>
                 </div>

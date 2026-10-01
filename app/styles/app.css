@@ -21,6 +21,13 @@
 }
 
 @font-face {
+  font-family: 'Sofia Pro Semi Bold';
+  src: url('../assets/fonts/Sofia_Pro_Semi_Bold.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Suisse Int';
   src: url('../assets/fonts/SuisseIntl-Regular.ttf') format('opentype');
   font-weight: 400;
@@ -33,6 +40,13 @@ img {
 
 .avatar-img {
   width: 50px;
+  margin-bottom: 10px;
+}
+
+.avatar-color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 .review-item {
@@ -55,15 +69,14 @@ img {
   letter-spacing: 4%;
 }
 
-
-
 .customize-button {
   background: #01005B;
   color: #fff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 3rem;
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
+  font-family: 'Suisse Int';
 }
 
 .customize-button img {
@@ -389,14 +402,77 @@ main .review-item {
   text-align: center;
 }
 
+.total-green-impact-component span {
+  font-family: Sofia Pro;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3%;
+  text-align: center;
+  vertical-align: middle;
+  color: #15005B;
+  margin-top: 5px;
+}
+
+.impact-item {
+  padding: 0 30px;  
+}
+
+.impact-item:not(:first-child) {
+  border-left: 1px solid #C4C4C480;
+}
+
+.impact-container {
+  margin: 2rem 0 1.5rem;
+}
+
+.impact-container img {
+  width: 50px;
+}
+
+.impact-item h3 {
+  font-family: 'Sofia Pro Semi Bold';
+}
+
 /*
-* --------------------------------------------------
-* components/FansSayingComponent
-* --------------------------------------------------
-*/
+ * --------------------------------------------------
+ * components/FansSayingComponent
+ * --------------------------------------------------
+ */
 
 .fans-saying-component {
   padding: 2rem;
+}
+
+.reviewsSwiper {
+  position: relative;
+}
+
+.reviewsSwiper .swiper-button-next,
+.reviewsSwiper .swiper-button-prev {
+  color: #676869;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.reviewsSwiper .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 1rem;
+}
+
+.reviews-swiper > div {
+  padding: 0 50px;  
+}
+
+.reviews-swiper {
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  .reviewsSwiper .swiper-pagination {
+    display: none;
+  }
 }
 /*
 * --------------------------------------------------
@@ -480,9 +556,48 @@ main .review-item {
   padding: 1rem;
 }
 
+.footer-div p {
+  font-family: Sofia Pro;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3%;
+  color: #676869;
+  padding: 0 5px;
+  margin: 0 10px;
+  max-width: 190px;
+}
+
+.footer-div img {
+  margin: 0 0 0 20px; 
+}
+
+footer .footer-div:not(:last-child) {
+  border-right: 1px solid #C4C4C4;
+}
+
+.payment-contailer p {
+  border-right: 1px solid #C4C4C4;
+  padding-right: 10px;
+}
+
+.payment-contailer img {
+  padding-left: 10px;
+}
+
 .footer-menu a {
   color: var(--color-light);
   min-width: fit-content;
+}
+
+.payment-text {
+  font-family: 'Suisse Int';
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 4%;
+  color: #1FAD40;
 }
 
 /*
@@ -960,7 +1075,7 @@ main .review-item {
 
 .girlSwiper .swiper-button-next,
 .girlSwiper .swiper-button-prev {
-    color: #01005B;
+    color: #676869;
     top: 50%;
     transform: translateY(-50%);
 }
