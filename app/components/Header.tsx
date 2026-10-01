@@ -26,7 +26,11 @@ export function Header({
   const {shop, menu} = header;
   return (
     <header className="header">
-      <p>CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders &gt; $200   |   easy 45 day return window.</p>
+      <p className="flex">
+        <span>CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)</span>
+        <span>FREE SHIPPING on orders &gt; $200 </span> 
+        <span> easy 45 day return window.</span>
+      </p>
     </header>
   );
 }
