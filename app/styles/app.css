@@ -115,9 +115,14 @@ img {
 }
 
 footer {
+  padding: 2rem 0 3rem;
+  background-color: #fff;
+}
+.bg-blobk {
+  display: flex;
+  justify-content: center;
   background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
 }
-
 /*
 * --------------------------------------------------
 * Non anchor links
@@ -354,6 +359,7 @@ header span:not(:last-child)::after {
 }
 
 main .review-item {
+  max-width: 500px;
   position: absolute;
   background: #fff;
   z-index: 85;
@@ -976,7 +982,7 @@ footer .footer-div:not(:last-child) {
  */
 
 .loungewear-component {
-  padding: 2rem;
+  padding: 95px 2rem 2rem;
   background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
   overflow-x: hidden;
   max-width: 100%;
@@ -1158,10 +1164,33 @@ footer .footer-div:not(:last-child) {
     object-fit: contain;
 }
 
+.mobile-screen {
+  display: none;
+}
+
+.desctop-screen {
+  display: block;
+}
+
 @media (max-width: 768px) {
 
+  .mobile-screen {
+    display: block;
+  }
+
+  .desctop-screen {
+    display: none;
+  }
+  
+  .title-style {
+    text-align: center;
+  }
   header span::after {
     content: '' !important;
+  }
+
+  .white-robe-swipe-container {
+    min-height: 80vh;
   }
 
   header span:nth-child(1),
@@ -1193,7 +1222,7 @@ footer .footer-div:not(:last-child) {
   }
 
   main .review-item {
-    margin-top: -10px;
+    margin-top: -10px;    
   }
 
   .as-see-in-swipe-container .swiper {

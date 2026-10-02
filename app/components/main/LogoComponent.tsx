@@ -12,8 +12,8 @@ export default function LogoComponent() {
             < Logo />
             
             <div className="flex items-center justify-between">
-                <div >
-                  <h2 className="title-style">Don’t apologize for being comfortable.</h2>
+                <div>
+                  <h2 className="title-style desctop-screen">Don’t apologize for being comfortable.</h2>
                   <div className="comfortable-container">
                     <div className="flex">
                         <img src={first} alt="First Icon" />
@@ -31,6 +31,7 @@ export default function LogoComponent() {
                   <CustomizeButton />
                 </div>
                 <div>
+                  <h2 className="title-style mobile-screen">Don’t apologize for being comfortable.</h2>
                   <img src={logoGroup} alt="Logo Group" />
                 </div>
             </div>
