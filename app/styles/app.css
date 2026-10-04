@@ -38,6 +38,10 @@ img {
   border-radius: 4px;
 }
 
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}
+
 .avatar-img {
   width: 50px;
   margin-bottom: 10px;
@@ -48,18 +52,28 @@ img {
   min-width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .review-item {
   border-radius: 8px;
   border: 1px solid #EDEDED;
   max-width: 600px;
-  padding: 1rem;
+  padding: 1.2rem 2rem;
+  box-shadow: 0px 3px 10px 1px #00000014;
+}
+
+.reviews-swiper .swiper-wrapper {
+  overflow: hidden;
+}
+
+.reviews-swiper .swiper-button-prev,
+.reviews-swiper .swiper-button-next {
+  width: 30px;
 }
 
 .stars-img {
-  height: 15px;
+  height: 13px;
 }
 
 .text-review {
@@ -69,6 +83,18 @@ img {
   font-size: 12px;
   line-height: 23px;
   letter-spacing: 4%;
+  color: #676869;
+
+}
+
+.text-typogpaphy {
+  font-family: 'Suisse Int';
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: #828282;
 }
 
 .customize-button {
@@ -481,7 +507,7 @@ main .review-item {
  */
 
 .fans-saying-component {
-  padding: 2rem;
+  padding: 2rem 5px;
 }
 
  .fans-saying-component .title-style + .p-style {
@@ -510,7 +536,7 @@ main .review-item {
 }
 
 .reviews-swiper {
-  margin-top: 50px;
+  margin: 50px 50px 0;
 }
 @media (min-width: 768px) {
   .reviewsSwiper .swiper-pagination {
@@ -1004,6 +1030,10 @@ footer .footer-div:not(:last-child) {
   max-width: 100%;
   box-sizing: border-box;
 }
+/* 
+.loungewear-component > p {
+  margin-top: 250px;
+} */
 
 .loungewear-component > .flex {
   display: flex;
@@ -1284,6 +1314,20 @@ footer .footer-div:not(:last-child) {
     padding: 2.5rem 1rem 2rem;
   }
 
+  .comfort-make-ease-container > div{
+   flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #C4C4C4;
+    margin: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .comfort-make-ease-container > div img {
+    min-width: 60px;
+    min-height: 60px;
+    margin-bottom: 15px;
+  }
+
   .comfort-make-ease-container img {
     width: 28px;
     height: 28px;
@@ -1450,6 +1494,22 @@ footer .footer-div:not(:last-child) {
 @media (max-width: 480px) {
   .logo-container {
     padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .reviews-swiper > div {
+    padding: 0 45px;
+  }
+
+  .reviews-swiper .swiper-button-prev, .reviews-swiper .swiper-button-next {
+      width: 15px;
+  }
+
+  .reviews-swiper {
+    margin: 50px 10px 0;
+  }
+
+  .payment-contailer + div {
+    display: none;
   }
 
   .title-style {

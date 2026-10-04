@@ -86,7 +86,7 @@ export default function FansSayingComponent() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. Fusce non nibh luctus.
           </p>
         </div>
-        <div className="reviews-swiper mt-5"> 
+        <div className="fans-swiper mt-10"> 
           <FansRow images={firstRow} />
           <div className="mt-4" />
           <FansRow images={secondRow} />

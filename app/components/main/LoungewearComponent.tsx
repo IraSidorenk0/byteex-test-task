@@ -46,20 +46,20 @@ export default function LoungewearComponent() {
                 pagination={{ clickable: true }}
                 breakpoints={{
                     320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
+                        slidesPerView: 2,
+                        spaceBetween: 10,
                     },
                     600: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
+                        slidesPerView: 3,
+                        spaceBetween: 10,
                     },
                     768: {
                         slidesPerView: 3,
-                        spaceBetween: 30,
+                        spaceBetween: 10,
                     },
                     1024: {
                         slidesPerView: 5,
-                        spaceBetween: 0,
+                        spaceBetween: 10,
                     },
                 }}
             >
