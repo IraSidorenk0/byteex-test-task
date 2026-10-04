@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
+import CustomizeButton from './components/CustomizeButton';
+import stars from '../../assets/img/stars.svg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -47,6 +49,10 @@ function FansRow({ images }: { images: string[] }) {
       slidesPerView={11}
       spaceBetween={1}
       breakpoints={{
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 1,
+        },
         500: {
           slidesPerView: 4,
           spaceBetween: 1,
@@ -110,6 +116,13 @@ export default function FansSayingComponent() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className="flex flex-col items-center mt-4 w-full">
+            <CustomizeButton />
+            <div className="flex justify-center w-full mt-2">
+              <img src={stars} className="mr-2" />
+              <p className="p-small-style w-auto">Over 500+ 5 Star Reviews Online</p>
+            </div>
         </div>
       </div>
     </div>

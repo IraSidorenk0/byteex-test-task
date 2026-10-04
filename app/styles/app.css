@@ -45,6 +45,7 @@ img {
 
 .avatar-color {
   width: 50px;
+  min-width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -73,7 +74,7 @@ img {
 .customize-button {
   background: #01005B;
   color: #fff;
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 3.5rem;
   border-radius: 5px;
   font-weight: 400;
   cursor: pointer;
@@ -113,6 +114,17 @@ img {
   line-height: 23px;
   letter-spacing: 3%;
   color: #676869;
+}
+
+.p-small-style {
+  font-family: 'Suisse Int';
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: #828282;
+
 }
 
 footer {
@@ -471,6 +483,10 @@ main .review-item {
 .fans-saying-component {
   padding: 2rem;
 }
+
+ .fans-saying-component .title-style + .p-style {
+    width: 50%;
+  }
 
 .reviewsSwiper {
   position: relative;
@@ -1174,7 +1190,7 @@ footer .footer-div:not(:last-child) {
 
 @media (max-width: 768px) {
 
-  .fans-saying-component .p-style {
+  .fans-saying-component .title-style + .p-style {
     width: 100% !important;
   }
 
@@ -1316,9 +1332,7 @@ footer .footer-div:not(:last-child) {
     padding: 1.5rem 1rem;
   }
 
-  .fans-saying-component .p-style {
-    width: 50%;
-  }
+ 
 
   .reviews-swiper > div {
     padding: 0 10px;
