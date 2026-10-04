@@ -49,6 +49,7 @@ img {
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
 .review-item {
   border-radius: 8px;
   border: 1px solid #EDEDED;
@@ -117,11 +118,10 @@ img {
 footer {
   padding: 2rem 0 3rem;
   background-color: #fff;
-}
-.bg-blobk {
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
+  background: url('../assets/img/footer-bg.png');
+  background-position-y: bottom;
+  background-position-x: center;
+  background-size: cover;
 }
 /*
 * --------------------------------------------------

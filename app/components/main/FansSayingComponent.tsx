@@ -1,11 +1,21 @@
-import fanse from '~/assets/img/fans.jpg';
-import stars from '~/assets/img/stars.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Review from './components/Review';
+
+const images = import.meta.glob('~/assets/img/fans-img/*.png', { eager: true });
+const fanImages = Object.keys(images)
+  .sort((a, b) => {
+    const numA = parseInt(a.match(/\d+/)?.[0] || '0');
+    const numB = parseInt(b.match(/\d+/)?.[0] || '0');
+    return numA - numB;
+  })
+  .map(key => (images[key] as { default: string }).default);
+
+const firstRow = fanImages.slice(0, 11);
+const secondRow = fanImages.slice(11, 22);
 
 const reviews = [
   {
@@ -30,39 +40,78 @@ const reviews = [
   },
 ];
 
+function FansRow({ images }: { images: string[] }) {
+  return (
+    <Swiper
+      className="reviewsSwiper"
+      slidesPerView={11}
+      spaceBetween={1}
+      breakpoints={{
+        500: {
+          slidesPerView: 4,
+          spaceBetween: 1,
+        },
+        768: {
+          slidesPerView: 8,
+          spaceBetween: 1,
+        },
+        900: {
+          slidesPerView: 11,
+          spaceBetween: 1,
+        }
+      }}
+    >
+      {images.map((src, index) => (
+        <SwiperSlide key={index}>
+          <img src={src} alt={`Fan ${index + 1}`} className="w-full h-auto object-cover" />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+}
+
 export default function FansSayingComponent() {
   return (
     <div className="fans-saying-component">
-        <div>
-          <h2 className="title-style mt-4">What are our fans saying?</h2>
-          <img src={fanse} alt="Fans" />
-          <div className="reviews-swiper mt-5">
-            <Swiper
-              className="reviewsSwiper"
-              modules={[Pagination, Navigation]}
-              slidesPerView={1}
-              spaceBetween={20}
-              navigation
-              pagination={{ clickable: true }}
-              breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-            >
-              {reviews.map((review) => (
-                <SwiperSlide key={review.name}>
-                  <Review showAvatar={true} showBadge={false} avatarColor="#1C2E58" name={review.name} text={review.text} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+      <div>
+        <div className="flex flex-col items-center">
+          <h2 className="title-style text-center mt-4">What are our fans saying?</h2>
+          <p className="p-style w-1/2 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. Fusce non nibh luctus.
+          </p>
         </div>
+        <div className="reviews-swiper mt-5"> 
+          <FansRow images={firstRow} />
+          <div className="mt-4" />
+          <FansRow images={secondRow} />
+        </div>
+        <div className="reviews-swiper mt-5">
+          <Swiper
+            className="reviewsSwiper"
+            modules={[Pagination, Navigation]}
+            slidesPerView={1}
+            spaceBetween={20}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            {reviews.map((review) => (
+              <SwiperSlide key={review.name}>
+                <Review showAvatar={true} showBadge={false} avatarColor="#1C2E58" name={review.name} text={review.text} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </div>
   );
 }

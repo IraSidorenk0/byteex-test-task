@@ -14,14 +14,14 @@ export default function FooterComponent() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien <br/>
                 facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.
             </p>
-            <div className="flex flex-col items-center justify-center">
-                <img src={footer} alt="Footer" className="mr-4 my-7" />
+            <div className="flex flex-col items-center justify-center mt-4 mb-8">
+                <img src={footer} alt="Footer" className="mb-10 mt-4"/>
                 <CustomizeButton />
                 <div className="payment-contailer flex mt-3">
                     <p className="payment-text">Ships in 1-2 Days</p>
                     <img src={payments} alt='Payments' />
                 </div>
-                <div className="mt-3 flex">
+                <div className="mt-3 flex mt-7">
                     <div className="footer-div flex items-center">
                         <img src={first} alt="" />
                         <p>FREE Shipping on Orders over $200</p>
