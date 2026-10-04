@@ -76,7 +76,7 @@ export default function FansSayingComponent() {
       <div>
         <div className="flex flex-col items-center">
           <h2 className="title-style text-center mt-4">What are our fans saying?</h2>
-          <p className="p-style w-1/2 text-center">
+          <p className="p-style text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. Fusce non nibh luctus.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function FansSayingComponent() {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 10,
               },
               768: {
                 slidesPerView: 3,

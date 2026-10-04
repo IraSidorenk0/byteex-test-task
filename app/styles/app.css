@@ -1174,6 +1174,11 @@ footer .footer-div:not(:last-child) {
 
 @media (max-width: 768px) {
 
+  .fans-saying-component .p-style {
+    width: 100% !important;
+  }
+
+
   .mobile-screen {
     display: block;
   }
@@ -1309,6 +1314,10 @@ footer .footer-div:not(:last-child) {
 
   .fans-saying-component {
     padding: 1.5rem 1rem;
+  }
+
+  .fans-saying-component .p-style {
+    width: 50%;
   }
 
   .reviews-swiper > div {
